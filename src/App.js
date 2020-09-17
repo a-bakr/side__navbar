@@ -1,0 +1,30 @@
+import React from "react";
+import "./App.css";
+import Navbar from "./Components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./Pages/Home";
+import Products from "./Pages/Products";
+import Reports from "./Pages/Reports";
+import Team from "./Pages/Team";
+import Messages from "./Pages/Messages";
+import Suport from "./Pages/Suport";
+
+function App() {
+  return (
+    <>
+      <Router>
+        <Navbar />
+        <Switch>
+          <Route path="/" exact component={Home} />
+          <Route path="/reports" component={Reports} />
+          <Route path="/products" component={Products} />
+          <Route path="/team" component={Team} />
+          <Route path="/messages" component={Messages} />
+          <Route path="/suport" component={Suport} />
+        </Switch>
+      </Router>
+    </>
+  );
+}
+
+export default App;
